@@ -1,0 +1,117 @@
+<html>
+  <html>
+    <%- include('partials/head'); %>
+    <head>
+      <style>
+        .pic .carousel-inner {
+        padding-top: 80px;
+        height: 650px;
+         }
+        .pic .carousel-inner img {
+        width: 100%;
+        height: 100%;
+         }
+        .exp-heading{
+       
+          font-size:35px;
+          text-align:center;
+          padding-bottom:75px
+        }
+        .page-heading{
+     
+         background-color: rgb(232, 247, 255);
+     }
+     .season{
+       color:rgb(182, 181, 110);
+       font-size: 80px;
+     }
+      </style>
+    </head>
+  <body id="body" style="overflow-x: hidden;">
+  
+      <!-- Header -->
+      <%- include('partials/header'); %>
+
+    <div id="demo" class="pic carousel slide carousel-fade" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/carousel/home1.jpg" alt="Offers" width="1100" height="400">
+            <div class="carousel-caption">
+              <h3>Best Offer</h3>
+              <p>New Arrivals On Sale</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="/carousel/home2.jpg" alt="Deals" width="1000" height="400">
+            <div class="carousel-caption">
+              <h3>Flash Deals</h3>
+              <p>Get your best products</p>
+            </div>   
+          </div>
+          <div class="carousel-item">
+            <img src="/carousel/home3.jpg" alt="lastmin" width="1100" height="500">
+            <div class="carousel-caption">
+              <h3>Last Minute</h3>
+              <p>Grab last minute deals</p>
+            </div>   
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+        </div>
+
+    
+    <!-- Page Content -->
+    <div class="page-heading products-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content1">
+              <h1 class="new">new arrivals</h1>
+              <hr width="400px" style="margin-left:450px;">
+              <h2 class="season">FESTIVE SEASON</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <section class="collections">
+        <h1 class="col_heading">Collections</h1>
+        <div class="col-row row" id="parent">
+            <% products.forEach((item)=>{%>
+            <div class="col-block col-md-2 col-sm-4">
+                <a  class="col_link" href=<%=item.col_href%>>
+                <img class="col-img img-fluid mx-auto" src=<%=item.col_img%>>
+                <form action=<%=item.col_href%>><button type="submit" class="name"><%=item.col_name%></button></form>
+            </a>
+            </div>
+            <%});%>
+        </div>
+    </section>
+    
+    <section class="explore-trends" style="padding-top: 100px; padding-bottom: 100px;">
+      <h1 class="exp-heading">Explore top brands</h1>
+      <div class="row">
+      <% exp.forEach((item)=>{%>
+      <div class="col-md-2">
+        <img class="img-fluid d-block mx-auto" src=<%=item%>>
+      </div>
+      <%});%>
+    </div>
+    </section>
+    <%- include('partials/join'); %>
+
+    <%- include('partials/footer'); %>
+
+</body>
+</html>

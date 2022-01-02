@@ -1,0 +1,39 @@
+<html>
+  <html>
+    <%- include('partials/head'); %>
+  <body id="body" style="overflow-x: hidden;">
+  
+      <!-- Header -->
+      <%- include('partials/header'); %>
+
+    <section class="fake-body">
+        <div class="contact-wrapper">
+            <div class="left_side">
+              <img src="https://cdn.dribbble.com/users/361933/screenshots/2047405/lock.gif" width="100%">
+            </div>
+            <div class="right_side">
+              <h2>Password Reset</h2>
+              <form method="post" action="/login/reset-password">
+                <div class="form-row">
+                  <input type="email" name="email" required>
+                  <span>Email</span>
+                </div>
+                <div class="form-row"> 
+                    <button type="submit">Confirm</button>
+                  </div>
+              </form>
+        
+              <div class="socials-wrapper">
+                <h2>Login with your Social Account</h2>
+                <ul>
+                  <li><a href="https://www.facebook.com/about/login/" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
+                  <li><a href="https://twitter.com" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.youtube.com/account" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </section>
+</body>
+</html>

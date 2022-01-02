@@ -1,0 +1,45 @@
+<html>
+  <%- include('partials/head'); %>
+<body id="body" style="overflow-x: hidden;">
+    <!-- Header -->
+    <%- include('partials/header'); %>
+
+    <section class="fake-body">
+    <div class="contact-wrapper">
+        <div class="left_side">
+          <img src="https://pro2-bar-s3-cdn-cf1.myportfolio.com/494ef02828a343b048cd54a0ff278842/943f75b4-8bea-4b2e-b2c4-8a152cd29fbc_rw_600.gif?h=b4a2fe61d419a87ca59564ca099213ae">
+        </div>
+        <div class="right_side">
+          <h2>Account Login</h2>
+          <form method="post" action="/login">
+            <div class="form-row">
+              <input type="text" name="emailorname" required>
+              <span>Username or Email</span>
+            </div>
+            <div class="form-row">
+              <input type="password" name="password" required>
+              <span>Password</span>
+            </div>
+            <div class="form-row"></div>
+            <a href="/login/reset-password" class="href">Forgot Password?</a>
+            <div class="form-row"> 
+              <button type="submit" onclick="check()">Login to your Account</button>
+            </div>
+            <a href="/sign-up" class="new"><b>New to ShopMe?</b> Then click here to signup</a>
+          </form>
+
+    
+          <div class="socials-wrapper">
+            <h2>Login with your Social Account</h2>
+            <ul>
+              <li><a href="https://www.facebook.com/about/login/" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="https://twitter.com" class="twitter"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com" class="instagram"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.youtube.com/account" class="youtube"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+</html>

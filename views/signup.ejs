@@ -1,0 +1,52 @@
+<html>
+  <html>
+    <%- include('partials/head'); %>
+  <body id="body" style="overflow-x: hidden;">
+  
+      <!-- Header -->
+      <%- include('partials/header'); %>
+
+    <section class="fake-body">
+                    <div class="contact-wrapper">
+                        <div class="left_side">
+                          <img src="https://cdn.dribbble.com/users/2559/screenshots/2732117/helpshift-illus.gif" width="130%" height="60%">
+                        </div>
+                        <div class="right_side">
+                          <h2>Account Signup</h2>
+                          <form class="sign-up" method="post" action="/sign-up">
+                            <div class="form-row">
+                                <input type="text" name="name" required>
+                                <span>Full Name</span>
+                            </div>
+                            
+                            <div class="form-row">
+                              <input type="email" name="email" required>
+                              <span>Email</span>
+                            </div>
+                            <div class="form-row">
+                                <input type="password" name="password" required>
+                                <span>Password</span>
+                              </div>
+                            <div class="form-row">
+                                <input type="password" name="cpassword" required>
+                                <span>Re Enter Password</span>
+                              </div>
+                            <div class="form-row">
+                                <input type="text" name="contact" required>
+                                <span>Mobile Number</span>
+                              </div>
+                              <div class="form-row"> 
+                                <button type="submit">Signup</button>
+                              </div>
+                          </form>
+
+                          
+                          <div class="socials-wrapper">
+                            <a href="/login" class="href"><b>Click here to login</b></a>
+                          </div>
+                        </div>
+                      </div>
+
+    </section>
+</body>
+</html>
